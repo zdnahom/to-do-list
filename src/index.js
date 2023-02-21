@@ -8,7 +8,13 @@ const todoLists=[
 function populateTodos(data){
     data.forEach(element => {
         const li = document.createElement('li')
-        li.innerHTML=`${element.description}`
+        li.innerHTML=`
+        <div>
+        <input type="checkbox" name="" id="">
+        <span>${element.description}</span>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+        `
         document.querySelector('.tasks').appendChild(li)
     });
 }

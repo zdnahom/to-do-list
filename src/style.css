@@ -24,7 +24,7 @@ body {
   border-bottom: 1px solid #d2d2d2;
 }
 .tasks-header h3{
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 400;
     color: #6b6262;
     
@@ -43,7 +43,7 @@ body {
   border: none;
   outline: none;
   padding: 3%;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #6b6262;
 }
 .task-adder i{
@@ -67,4 +67,27 @@ body {
 .button-wrapper button:hover{
     color: black;
     text-decoration: underline;
+}
+.tasks{
+    /* background-color: red; */
+}
+.tasks li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+    font-size: 1em;
+    border-bottom: 1px solid #d2d2d2;
+}
+.tasks div{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.tasks i:nth-child(1) {
+    font-size: 1.3em;
+}
+.tasks i:nth-child(2):hover {
+    color: black;
+    cursor: pointer;
 }

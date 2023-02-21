@@ -4,7 +4,8 @@
   "description": "To do list app using javascript ,html and css.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/zdnahom/to-do-list/issues"
   },
-  "homepage": "https://github.com/zdnahom/to-do-list#readme"
+  "homepage": "https://github.com/zdnahom/to-do-list#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
 }

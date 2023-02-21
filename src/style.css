@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: #d2d2d2;
 }
@@ -12,8 +13,9 @@ body {
   background-color: white;
   margin: 100px auto;
 }
-.tasks-wrapper i{
-    color: gray;
+
+.tasks-wrapper i {
+  color: gray;
 }
 
 .tasks-header {
@@ -23,21 +25,24 @@ body {
   padding: 3%;
   border-bottom: 1px solid #d2d2d2;
 }
-.tasks-header h3{
-    font-size: 1em;
-    font-weight: 400;
-    color: #6b6262;
-    
+
+.tasks-header h3 {
+  font-size: 1em;
+  font-weight: 400;
+  color: #6b6262;
 }
-.tasks-header i{
-    font-size: 0.8em;
+
+.tasks-header i {
+  font-size: 0.8em;
 }
+
 .task-adder {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #d2d2d2;
 }
+
 .task-adder input {
   width: 100%;
   border: none;
@@ -46,48 +51,56 @@ body {
   font-size: 1em;
   color: #6b6262;
 }
-.task-adder i{
-    font-size: 0.8em;
-    margin-right: 3%;
+
+.task-adder i {
+  font-size: 0.8em;
+  margin-right: 3%;
 }
-.button-wrapper{
-    display: flex;
-    justify-content: center;
-    background-color: #f7f2f2;
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #f7f2f2;
 }
-.button-wrapper button{
-    background-color: inherit;
-    border: none;
-    padding: 3%;
-    cursor: pointer;
-    font-size: 1em;
-    color: #6b6262;
-    
+
+.button-wrapper button {
+  background-color: inherit;
+  border: none;
+  padding: 3%;
+  cursor: pointer;
+  font-size: 1em;
+  color: #6b6262;
 }
-.button-wrapper button:hover{
-    color: black;
-    text-decoration: underline;
+
+.button-wrapper button:hover {
+  color: black;
+  text-decoration: underline;
 }
-.tasks{
-    /* background-color: red; */
+
+.tasks {
+  /* background-color: red; */
 }
-.tasks li{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3%;
-    font-size: 1em;
-    border-bottom: 1px solid #d2d2d2;
+
+.tasks li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+  font-size: 1em;
+  border-bottom: 1px solid #d2d2d2;
 }
-.tasks div{
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
+
+.tasks div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
+
 .tasks i:nth-child(1) {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
+
 .tasks i:nth-child(2):hover {
-    color: black;
-    cursor: pointer;
+  color: black;
+  cursor: pointer;
 }

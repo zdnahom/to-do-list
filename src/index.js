@@ -1,3 +1,5 @@
+import "./style.css"
+
 const todoLists=[
     {description:"Take a nap",completed:false,index:0},
     {description:"Workout",completed:false,index:1},

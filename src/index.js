@@ -16,10 +16,12 @@ function populateTodos(data) {
     const li = document.createElement('li');
     li.innerHTML = `
         <div>
-        <i class="fa-regular fa-square"></i>
+        <input type="checkbox" name="checkbox">
         <span>${element.description}</span>
         </div>
-        <i class="fa-solid fa-ellipsis-vertical"></i>
+        <button type="button" id=${data.index}>
+        <i class="fa-solid fa-trash"></i>
+        </button>
         `;
     document.querySelector('.tasks').appendChild(li);
   });
@@ -28,5 +30,5 @@ form.addEventListener("submit",(event)=>{
   event.preventDefault()
   container.addTodo(task.value)
 })
-
+// localStorage.clear()
 populateTodos(todoLists);

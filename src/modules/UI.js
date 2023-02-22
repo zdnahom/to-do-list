@@ -1,12 +1,12 @@
-export class UI{
-    static remove=(id)=>{
-        const element=document.getElementById(id)
-        element.parentNode.parentNode.remove()
-        return
+export default class UI {
+    static remove=(id) => {
+      const element = document.getElementById(id);
+      element.parentNode.parentNode.remove();
     }
-    static add = (id,description) => {
-        const li = document.createElement("li");
-        li.innerHTML =`
+
+    static add = (id, description) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
             <div>
             <input type="checkbox" name="checkbox">
             <span>${description}</span>
@@ -15,7 +15,6 @@ export class UI{
             <i class="fa-solid fa-trash" id=${id}></i>
             </button>
             `;
-        document.querySelector(".tasks").appendChild(li);
-        return
-      };
+      document.querySelector('.tasks').appendChild(li);
+    };
 }

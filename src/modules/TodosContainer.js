@@ -3,14 +3,15 @@ import { getTodos, setTodos } from "./store.js";
 export default class TodosContainer {
   todos = getTodos() || [];
   addTodo = (description) => {
+    const idRandom = (Math.floor(Math.random() * 100000)).toString();
     const index = this.todos.length + 1;
-    const todo = new Todo(description, false, index);
+    const todo = new Todo(idRandom,description, false, index);
     this.todos.push(todo);
     setTodos(this.todos);
   };
-  removeTodo = (index) => {
+  removeTodo = (id) => {
     this.todos = this.todos
-      .filter((todo) => todo.index !== parseInt(index))
+      .filter((todo) => todo.id !== id)
       .map((todo, index) => {
         return { ...todo, index: index + 1 };
       });

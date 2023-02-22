@@ -4,7 +4,7 @@ export default class TodosContainer{
     todos= getTodos()|| [];
     addTodo=(description)=>{
         const todo=new Todo(description);
-        this.todos.push(this.todos)
+        this.todos.push(todo)
         setTodos(this.todos)
     }
 }

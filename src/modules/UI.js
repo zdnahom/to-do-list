@@ -1,6 +1,8 @@
 export class UI{
-    static remove=(element)=>{
+    static remove=(id)=>{
+        const element=document.getElementById(id)
         element.parentNode.parentNode.remove()
+        return
     }
     static add = (id,description) => {
         const li = document.createElement("li");
@@ -14,5 +16,6 @@ export class UI{
             </button>
             `;
         document.querySelector(".tasks").appendChild(li);
+        return
       };
 }

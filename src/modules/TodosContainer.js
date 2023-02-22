@@ -1,6 +1,6 @@
 import Todo from "./Todo.js"
 import {getTodos,setTodos} from "./store.js"
-class TodosContainer{
+export default class TodosContainer{
     todos= getTodos()|| [];
     addTodo=(description)=>{
         const todo=new Todo(description);

@@ -4,12 +4,12 @@ import { UI } from "./UI";
 export default class TodosContainer {
   todos = getTodos() || [];
   addTodo = (description) => {
-    const idRandom = (Math.floor(Math.random() * 100000)).toString();
+    const id = (Math.floor(Math.random() * 100000)).toString();
     const index = this.todos.length + 1;
-    const todo = new Todo(idRandom,description, false, index);
+    const todo = new Todo(id,description, false, index);
     this.todos.push(todo);
     setTodos(this.todos);
-    UI.add(idRandom,description) 
+    UI.add(id,description) 
   };
   removeTodo = (id) => {
     this.todos = this.todos

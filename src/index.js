@@ -18,6 +18,7 @@ function populateTodos(data) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   container.addTodo(task.value);
+  task.value=""
 });
 todoElements.addEventListener("click", (event) => {
   if (event.target.id) {

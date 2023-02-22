@@ -24,5 +24,7 @@ todoElements.addEventListener("click", (event) => {
     container.removeTodo(event.target.id);
   }
 });
+window.addEventListener("DOMContentLoaded", () => {
+  populateTodos(todoLists);
+});
 
-populateTodos(todoLists);

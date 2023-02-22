@@ -1,14 +1,12 @@
 import './style.css';
+import { getTodos } from './modules/store';
 import TodosContainer from './modules/TodosContainer';
 
-const todoLists = [
-  { description: 'wash the dishes', completed: false, index: 0 },
-  { description: 'complete To Do list project', completed: false, index: 1 },
-];
-
+const todoLists = getTodos()|| [];
 const container=new TodosContainer(); 
 
 const form =document.querySelector('.task-adder form')
+
 const {task}=form.elements
 
 function populateTodos(data) {

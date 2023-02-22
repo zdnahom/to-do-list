@@ -6,7 +6,8 @@ const todoLists = getTodos()|| [];
 const container=new TodosContainer(); 
 
 const form =document.querySelector('.task-adder form')
-
+const todoElements=document.querySelector('.tasks')
+console.log(todoElements)
 const {task}=form.elements
 
 function populateTodos(data) {
@@ -17,8 +18,8 @@ function populateTodos(data) {
         <input type="checkbox" name="checkbox">
         <span>${element.description}</span>
         </div>
-        <button type="button" id=${data.index}>
-        <i class="fa-solid fa-trash"></i>
+        <button type="button">
+        <i class="fa-solid fa-trash" id=${element.index}></i>
         </button>
         `;
     document.querySelector('.tasks').appendChild(li);
@@ -27,6 +28,11 @@ function populateTodos(data) {
 form.addEventListener("submit",(event)=>{
   event.preventDefault()
   container.addTodo(task.value)
+})
+todoElements.addEventListener("click",(event)=>{
+  if(event.target.id){
+    container.removeTodo(event.target.id)
+  }
 })
 // localStorage.clear()
 populateTodos(todoLists);

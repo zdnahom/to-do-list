@@ -6,7 +6,7 @@ import { UI } from "./modules/UI";
 const todoLists = getTodos() || [];
 const container = new TodosContainer();
 
-const form = document.querySelector(".task-adder form");
+const form = document.querySelector(".task-adder");
 const todoElements = document.querySelector(".tasks");
 const { task } = form.elements;
 

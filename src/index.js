@@ -41,10 +41,20 @@ todoElements.addEventListener("click", (event) => {
 todoElements.addEventListener("change",(event)=>{
   if (event.target.id.includes("checkbox")){
     updateStatus(event.target.id)
+    const [statusId] = event.target.id.match(/\d+/);
+    const descriptionElement=document.querySelector(`#description-${statusId}`)
+    if(event.target.checked){
+      descriptionElement.style.color="gray"
+      descriptionElement.style.textDecoration="line-through"
+    }else{
+      
+      descriptionElement.style.color="black"
+      descriptionElement.style.textDecoration="none"
+    }
   }
 })
 clearButton.addEventListener("click",()=>{
-
+  clearTodoList()
 })
 window.addEventListener("DOMContentLoaded", () => {
   populateTodos(todoLists);

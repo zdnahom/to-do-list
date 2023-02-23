@@ -43,7 +43,9 @@ todoElements.addEventListener("change",(event)=>{
     updateStatus(event.target.id)
   }
 })
-
+clearButton.addEventListener("click",()=>{
+  
+})
 window.addEventListener("DOMContentLoaded", () => {
   populateTodos(todoLists);
 });

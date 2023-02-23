@@ -9,7 +9,7 @@ export default class UI {
     const li = document.createElement('li');
     li.innerHTML = `
             <div>
-            <input type="checkbox" name="checkbox" id="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox-${id}">
             <input type="text" name="task_description" id="description-${id}" value="${description}"/>
             </div>
             <button type="button">

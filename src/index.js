@@ -1,20 +1,43 @@
 import './style.css';
+import { getTodos } from './modules/store.js';
+import TodosContainer from './modules/TodosContainer.js';
+import UI from './modules/UI.js';
 
-const todoLists = [
-  { description: 'wash the dishes', completed: false, index: 0 },
-  { description: 'complete To Do list project', completed: false, index: 1 },
-];
+const todoLists = getTodos() || [];
+const container = new TodosContainer();
+
+const form = document.querySelector('.task-adder');
+const todoElements = document.querySelector('.tasks');
+const { task } = form.elements;
+
 function populateTodos(data) {
   data.forEach((element) => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-        <div>
-        <i class="fa-regular fa-square"></i>
-        <span>${element.description}</span>
-        </div>
-        <i class="fa-solid fa-ellipsis-vertical"></i>
-        `;
-    document.querySelector('.tasks').appendChild(li);
+    UI.add(element.id, element.description);
   });
 }
-populateTodos(todoLists);
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  container.addTodo(task.value);
+  task.value = '';
+});
+todoElements.addEventListener('click', (event) => {
+  const { target } = event;
+  if (parseInt(target.id, 10)) {
+    container.removeTodo(event.target.id);
+  } else if (target.id) {
+    target.parentNode.parentNode.style.backgroundColor = 'rgb(253, 238, 213)';
+    target.addEventListener('blur', () => {
+      target.parentNode.parentNode.style.backgroundColor = 'white';
+      container.updateDescription(target.id, target.value);
+    });
+
+    target.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        target.blur();
+      }
+    });
+  }
+});
+window.addEventListener('DOMContentLoaded', () => {
+  populateTodos(todoLists);
+});

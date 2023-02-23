@@ -3,11 +3,10 @@ export default class UI {
     const element = document.getElementById(id);
     const parentToRemove = element.parentNode.parentNode;
     parentToRemove.remove();
-    return;
   };
 
   static add = (id, description, status) => {
-    const li = document.createElement("li");
+    const li = document.createElement('li');
     li.innerHTML = `
             <div>
             <input type="checkbox" name="checkbox" id="checkbox-${id}">
@@ -18,16 +17,14 @@ export default class UI {
             </button>
             `;
 
-    document.querySelector(".tasks").appendChild(li);
+    document.querySelector('.tasks').appendChild(li);
     document.querySelector(`#checkbox-${id}`).checked = status;
     if (document.querySelector(`#checkbox-${id}`).checked) {
-      document.querySelector(`#description-${id}`).style.color = "gray";
-      document.querySelector(`#description-${id}`).style.textDecoration =
-        "line-through";
+      document.querySelector(`#description-${id}`).style.color = 'gray';
+      document.querySelector(`#description-${id}`).style.textDecoration = 'line-through';
     } else {
-      document.querySelector(`#description-${id}`).style.color = "black";
-      document.querySelector(`#description-${id}`).style.textDecoration =
-        "none";
+      document.querySelector(`#description-${id}`).style.color = 'black';
+      document.querySelector(`#description-${id}`).style.textDecoration = 'none';
     }
   };
 }

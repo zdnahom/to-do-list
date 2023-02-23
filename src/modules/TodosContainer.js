@@ -11,7 +11,7 @@ export default class TodosContainer {
       const todo = new Todo(id, description, false, index);
       this.todos.push(todo);
       setTodos(this.todos);
-      UI.add(id, description,false);
+      UI.add(id, description, false);
     }
   };
 

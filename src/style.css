@@ -90,12 +90,14 @@ body {
   line-height: 1em;
   background: white;
 }
-.tasks input[type='checkbox']:checked:after {
+
+.tasks input[type='checkbox']:checked::after {
   content: '✔';
   color: green;
   font-size: 1.4em;
   font-weight: 900;
 }
+
 .tasks input[type='text'] {
   width: 100%;
   font-size: 1em;
@@ -103,6 +105,7 @@ body {
   background-color: inherit;
   outline: none;
 }
+
 .tasks button {
   background-color: inherit;
   border: none;

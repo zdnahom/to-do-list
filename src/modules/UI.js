@@ -3,6 +3,7 @@ export default class UI {
     const element = document.getElementById(id);
     const parentToRemove = element.parentNode.parentNode;
     parentToRemove.remove();
+    return
   };
 
   static add = (id, description,status) => {
@@ -20,7 +21,4 @@ export default class UI {
             document.querySelector('.tasks').appendChild(li);
             document.querySelector( `#checkbox-${id}`).checked=status;
   };
-  static getTodo=(item)=>{
-    const li = document.createElement('li')
-  }
 }

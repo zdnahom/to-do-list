@@ -6,7 +6,7 @@ export default class TodosContainer {
   todos = getTodos() || [];
 
   addTodo = (description) => {
-    if (description.length !== 0) {
+    if (description.trim().length !== 0) {
       const id = (Math.floor(Math.random() * 100000)).toString();
       const index = this.todos.length + 1;
       const todo = new Todo(id, description, false, index);

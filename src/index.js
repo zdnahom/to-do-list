@@ -10,7 +10,7 @@ const container = new TodosContainer();
 const form = document.querySelector(".task-adder");
 const todoElements = document.querySelector(".tasks");
 const { task } = form.elements;
-
+const clearButton=document.querySelector(".button-wrapper button")
 function populateTodos(data) {
   data.forEach((element) => {
     UI.add(element.id, element.description,element.completed);
@@ -43,6 +43,7 @@ todoElements.addEventListener("change",(event)=>{
     updateStatus(event.target.id)
   }
 })
+
 window.addEventListener("DOMContentLoaded", () => {
   populateTodos(todoLists);
 });

@@ -23,4 +23,19 @@ export default class TodosContainer {
     setTodos(this.todos);
     UI.remove(id);
   };
+  updateDescription=(id,description)=>{
+    id=id.match(/\d+/)[0]
+    if(description.length>0){
+      this.todos=this.todos.map(todo=>{
+        if(id==todo.id){
+          return {...todo,description:description}
+        }else{
+          return todo
+        }
+      })
+      setTodos(this.todos);
+    }else{
+      this.removeTodo(id)
+    }
+  }
 }

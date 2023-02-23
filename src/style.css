@@ -69,13 +69,19 @@ body {
 .tasks div {
   display: flex;
   align-items: center;
-  font-size: 1.2em;
   gap: 0.8em;
+  width: 100%;
 }
-
-.tasks input {
+.tasks input:nth-child(1){
   width: 20px;
   height: 20px;
+}
+.tasks input:nth-child(2){
+  width: 100%;
+  font-size: 1em;
+  border: none;
+  background-color: inherit;
+  outline: none;
 }
 
 .tasks button {

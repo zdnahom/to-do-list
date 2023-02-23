@@ -23,19 +23,21 @@ export default class TodosContainer {
     setTodos(this.todos);
     UI.remove(id);
   };
-  updateDescription=(id,description)=>{
-    id=id.match(/\d+/)[0]
-    if(description.length>0){
-      this.todos=this.todos.map(todo=>{
-        if(id==todo.id){
-          return {...todo,description:description}
-        }else{
-          return todo
+
+  updateDescription=(id, description) => {
+    const [updateId] = id.match(/\d+/);
+    id=id.match(/\d+/g)[0]
+    const updateDes=description.match(/\w+/g)?description.match(/\w+/g).join(" "):""
+    if (updateDes.length > 0) {
+      this.todos = this.todos.map((todo) => {
+        if (todo.id===id) {
+          return { ...todo, description: updateDes};
         }
-      })
+        return todo;
+      });
       setTodos(this.todos);
-    }else{
-      this.removeTodo(id)
+    } else {
+      this.removeTodo(id);
     }
   }
 }

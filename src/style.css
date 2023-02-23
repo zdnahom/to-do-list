@@ -72,11 +72,13 @@ body {
   gap: 0.8em;
   width: 100%;
 }
-.tasks input:nth-child(1){
+
+.tasks input:nth-child(1) {
   width: 20px;
   height: 20px;
 }
-.tasks input:nth-child(2){
+
+.tasks input:nth-child(2) {
   width: 100%;
   font-size: 1em;
   border: none;

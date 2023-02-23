@@ -5,7 +5,7 @@ export default class UI {
     parentToRemove.remove();
   };
 
-  static add = (id, description) => {
+  static add = (id, description,status) => {
     const li = document.createElement('li');
     li.innerHTML = `
             <div>
@@ -16,6 +16,11 @@ export default class UI {
             <i class="fa-solid fa-trash" id=${id}></i>
             </button>
             `;
-    document.querySelector('.tasks').appendChild(li);
+       
+            document.querySelector('.tasks').appendChild(li);
+            document.querySelector( `#checkbox-${id}`).checked=status;
   };
+  static getTodo=(item)=>{
+    const li = document.createElement('li')
+  }
 }

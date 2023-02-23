@@ -1,6 +1,7 @@
 import './style.css';
 import { getTodos } from './modules/store.js';
 import TodosContainer from './modules/TodosContainer.js';
+import { updateStatus } from './modules/updateStatus.js';
 import UI from './modules/UI.js';
 
 const todoLists = getTodos() || [];

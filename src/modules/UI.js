@@ -1,9 +1,8 @@
 export default class UI {
   static remove = (id) => {
     const element = document.getElementById(id);
-    const parentToRemove=element.parentNode.parentNode 
-    parentToRemove.remove()
-    return
+    const parentToRemove = element.parentNode.parentNode;
+    parentToRemove.remove();
   };
 
   static add = (id, description) => {
@@ -18,6 +17,5 @@ export default class UI {
             </button>
             `;
     document.querySelector('.tasks').appendChild(li);
-    return
   };
 }

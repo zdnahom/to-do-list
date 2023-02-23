@@ -22,21 +22,18 @@ form.addEventListener('submit', (event) => {
 });
 todoElements.addEventListener('click', (event) => {
   const { target } = event;
-  if (parseInt(target.id)) {
+  if (parseInt(target.id, 10)) {
     container.removeTodo(event.target.id);
   } else if (target.id) {
-
     target.parentNode.parentNode.style.backgroundColor = 'rgb(253, 238, 213)';
     target.addEventListener('blur', () => {
       target.parentNode.parentNode.style.backgroundColor = 'white';
       container.updateDescription(target.id, target.value);
-      return
     });
 
     target.addEventListener('keypress', (event) => {
       if (event.key === 'Enter') {
-        target.blur()
-        return
+        target.blur();
       }
     });
   }

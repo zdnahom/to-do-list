@@ -26,18 +26,17 @@ export default class TodosContainer {
 
   updateDescription=(id, description) => {
     const [updateId] = id.match(/\d+/);
-    id=id.match(/\d+/g)[0]
-    const updateDes=description.match(/\w+/g)?description.match(/\w+/g).join(" "):""
+    const updateDes = description.match(/\w+/g) ? description.match(/\w+/g).join(' ') : '';
     if (updateDes.length > 0) {
       this.todos = this.todos.map((todo) => {
-        if (todo.id===id) {
-          return { ...todo, description: updateDes};
+        if (todo.id === updateId) {
+          return { ...todo, description: updateDes };
         }
         return todo;
       });
       setTodos(this.todos);
     } else {
-      this.removeTodo(id);
+      this.removeTodo(updateId);
     }
   }
 }

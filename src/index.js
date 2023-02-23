@@ -1,7 +1,7 @@
 import "./style.css";
 import { getTodos } from "./modules/store.js";
 import TodosContainer from "./modules/TodosContainer.js";
-import { updateStatus } from "./modules/updateStatus.js";
+import { updateStatus,clearTodoList } from "./modules/updateStatus.js";
 import UI from "./modules/UI.js";
 
 const todoLists = getTodos() || [];
@@ -44,7 +44,7 @@ todoElements.addEventListener("change",(event)=>{
   }
 })
 clearButton.addEventListener("click",()=>{
-  
+
 })
 window.addEventListener("DOMContentLoaded", () => {
   populateTodos(todoLists);

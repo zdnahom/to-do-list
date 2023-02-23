@@ -73,19 +73,36 @@ body {
   width: 100%;
 }
 
-.tasks input:nth-child(1) {
-  width: 20px;
-  height: 20px;
+.tasks input[type='checkbox'] {
+  width: 22px !important;
+  height: 22px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 1px solid rgb(226, 219, 219);
+  box-shadow: none;
+  text-align: center;
+  line-height: 1em;
+  background: white;
 }
-
-.tasks input:nth-child(2) {
+.tasks input[type='checkbox']:checked:after {
+  content: '✔';
+  color: green;
+  font-size: 1.4em;
+  font-weight: 900;
+}
+.tasks input[type='text'] {
   width: 100%;
   font-size: 1em;
   border: none;
   background-color: inherit;
   outline: none;
 }
-
 .tasks button {
   background-color: inherit;
   border: none;

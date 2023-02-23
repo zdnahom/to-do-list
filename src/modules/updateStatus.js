@@ -11,5 +11,6 @@ export const updateStatus=(id)=>{
     setTodos(todos)
 }
 export const clearTodoList=()=>{
-
+    const filteredTodos=getTodos().filter((todo)=>todo.completed===false)
+    setTodos(filteredTodos)
 }

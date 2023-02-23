@@ -10,3 +10,6 @@ export const updateStatus=(id)=>{
     })
     setTodos(todos)
 }
+export const clearTodoList=()=>{
+
+}

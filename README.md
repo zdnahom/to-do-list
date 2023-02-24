@@ -2,30 +2,31 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 To do list](#-to-do-list)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ (OPTIONAL) ](#-faq-optional-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 To do list<a name="about-project"></a>
 >
-To do list is a task management project built using pure javascript(ES6) , HTML and Css 
+To do list is a task management project built using pure javascript(ES6) , HTML, CSS, and Webpack.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,6 +54,10 @@ To do list is a task management project built using pure javascript(ES6) , HTML 
 ### Key Features <a name="key-features"></a>
 
 - **Display todo lists**
+- **Add new todo list**
+- **Remove todo list**
+- **Update todo list**
+- **Clear all completed todo lists**
 
 
 
@@ -88,16 +93,14 @@ git clone git@github.com:zdnahom/to-do-list.git
 Install this project with: 
   
   git clone git@github.com:zdnahom/to-do-list.git
-  
 
 
 ### Usage
 
 To run the project, execute the following command:
   - cd to-do-list
-  - start live server
-
-
+  - npm install
+  - npm start
 
 ### Run tests
 
@@ -118,10 +121,8 @@ To run tests, run the following command: No test module for now.But it will be a
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+-  **Add drag and drop functionality**
 -  **Add cool animations**
--  **Add new todo list to the collection**
--  **Remove todo list from the collection**
--  **Clear the whole using clear button**
 
 
 

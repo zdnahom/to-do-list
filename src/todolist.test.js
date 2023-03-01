@@ -42,4 +42,16 @@ describe("Test Add todo", () => {
     expect(tasks).toHaveLength(4);
   });
 });
+
+describe("Test Remove todo", () => {
+  it("Remove a todo with id=1", () => {
+    //arrange
+    const container = new TodosContainer();
+    //act
+    container.removeTodo("1");
+    const tasks = document.querySelectorAll(".tasks li");
+    //assert
+    expect(tasks).toHaveLength(3);
+  });
+});
     

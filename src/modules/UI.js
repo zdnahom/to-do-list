@@ -7,6 +7,7 @@ export default class UI {
 
   static add = (id, description, status) => {
     const li = document.createElement('li');
+    li.className = 'todo';
     li.innerHTML = `
             <div>
             <input type="checkbox" name="checkbox" id="checkbox-${id}">

@@ -1,4 +1,4 @@
-import TodosContainer from "./modules/TodosContainer";
+import TodosContainer from './modules/TodosContainer.js';
 
 // Set up our document body
 document.body.innerHTML = `
@@ -15,43 +15,42 @@ document.body.innerHTML = `
 </ul>
 `;
 
-describe("Test Add todo", () => {
-  it("Add a valid todo", () => {
-    //arrange
+describe('Test Add todo', () => {
+  it('Add a valid todo', () => {
+    // arrange
     const container = new TodosContainer();
 
-    //act
-    container.addTodo("read books");
-    container.addTodo("dance");
-    container.addTodo("code for 1 hour");
-    const tasks = document.querySelectorAll(".tasks li");
+    // act
+    container.addTodo('read books');
+    container.addTodo('dance');
+    container.addTodo('code for 1 hour');
+    const tasks = document.querySelectorAll('.tasks li');
 
-    //assert
+    // assert
     expect(tasks).toHaveLength(4);
   });
 
-  it("Add empty todo", () => {
-    //arrange
+  it('Add empty todo', () => {
+    // arrange
     const container = new TodosContainer();
 
-    //act
-    container.addTodo("  ");
-    const tasks = document.querySelectorAll(".tasks li");
+    // act
+    container.addTodo('  ');
+    const tasks = document.querySelectorAll('.tasks li');
 
-    //assert
+    // assert
     expect(tasks).toHaveLength(4);
   });
 });
 
-describe("Test Remove todo", () => {
-  it("Remove a todo with id=1", () => {
-    //arrange
+describe('Test Remove todo', () => {
+  it('Remove a todo with id=1', () => {
+    // arrange
     const container = new TodosContainer();
-    //act
-    container.removeTodo("1");
-    const tasks = document.querySelectorAll(".tasks li");
-    //assert
+    // act
+    container.removeTodo('1');
+    const tasks = document.querySelectorAll('.tasks li');
+    // assert
     expect(tasks).toHaveLength(3);
   });
 });
-    

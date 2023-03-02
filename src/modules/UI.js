@@ -32,4 +32,15 @@ export default class UI {
     const updateTaskElement=document.querySelector(`#${id}`)
     updateTaskElement.value=description
   }
+  static updateStatusUI=(id)=>{
+    const checkbox= document.querySelector(`#checkbox-${id}`);
+    const descriptionElement = document.querySelector(`#description-${id}`);
+    if (checkbox.checked) {
+      descriptionElement.style.color = 'gray';
+      descriptionElement.style.textDecoration = 'line-through';
+    } else {
+      descriptionElement.style.color = 'black';
+      descriptionElement.style.textDecoration = 'none';
+    }
+  }
 }

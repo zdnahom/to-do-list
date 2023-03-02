@@ -54,3 +54,23 @@ describe('Test Remove todo', () => {
     expect(tasks).toHaveLength(3);
   });
 });
+
+describe('Test Update todo', () => {
+  it('Update todo item description', () => {
+    // arrange
+    const container = new TodosContainer();
+    container.addTodo('read books');
+    container.addTodo('dance');
+    container.addTodo('code for 1 hour');
+
+    // act
+    container.updateDescription('1', 'Read more books');
+
+    // assert
+    const updatedTasks = document.querySelectorAll('.tasks li');
+    const updatedFirstInput = updatedTasks[0].querySelector('input[type="text"]');
+    expect(updatedFirstInput.value).toEqual('Read more books');
+  });
+});
+
+

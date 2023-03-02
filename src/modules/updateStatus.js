@@ -10,7 +10,7 @@ export const updateStatus = (id) => {
     return todo;
   });
   setTodos(todos);
-  UI.updateStatusUI(statusId)
+  UI.updateStatusUI(statusId);
 };
 export const clearTodoList = () => {
   const listToNotClear = getTodos()

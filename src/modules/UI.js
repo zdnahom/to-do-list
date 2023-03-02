@@ -28,12 +28,14 @@ export default class UI {
       document.querySelector(`#description-${id}`).style.textDecoration = 'none';
     }
   };
-  static updateTodo=(id,description)=>{
-    const updateTaskElement=document.querySelector(`#${id}`)
-    updateTaskElement.value=description
+
+  static updateTodo=(id, description) => {
+    const updateTaskElement = document.querySelector(`#${id}`);
+    updateTaskElement.value = description;
   }
-  static updateStatusUI=(id)=>{
-    const checkbox= document.querySelector(`#checkbox-${id}`);
+
+  static updateStatusUI=(id) => {
+    const checkbox = document.querySelector(`#checkbox-${id}`);
     const descriptionElement = document.querySelector(`#description-${id}`);
     if (checkbox.checked) {
       descriptionElement.style.color = 'gray';

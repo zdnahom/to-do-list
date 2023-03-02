@@ -1,6 +1,6 @@
-import Todo from "./Todo.js";
-import { getTodos, setTodos } from "./store.js";
-import UI from "./UI.js";
+import Todo from './Todo.js';
+import { getTodos, setTodos } from './store.js';
+import UI from './UI.js';
 
 export default class TodosContainer {
   addTodo = (description) => {
@@ -28,10 +28,10 @@ export default class TodosContainer {
     this.todos = getTodos() || [];
     const [updateId] = id.match(/\d+/);
 
-      if (description.trim().length !== 0) {
+    if (description.trim().length !== 0) {
       this.todos = this.todos.map((todo) => {
         if (todo.id === updateId) {
-          return { ...todo, description: description };
+          return { ...todo, description };
         }
         return todo;
       });

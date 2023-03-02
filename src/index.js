@@ -12,7 +12,6 @@ const form = document.querySelector('.task-adder');
 const { task } = form.elements;
 const clearButton = document.querySelector('.button-wrapper button');
 
-
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   container.addTodo(task.value);

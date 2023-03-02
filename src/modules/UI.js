@@ -28,4 +28,8 @@ export default class UI {
       document.querySelector(`#description-${id}`).style.textDecoration = 'none';
     }
   };
+  static updateTodo=(id,description)=>{
+    const updateTaskElement=document.querySelector(`#${id}`)
+    updateTaskElement.value=description
+  }
 }

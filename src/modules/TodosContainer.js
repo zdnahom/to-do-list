@@ -6,7 +6,7 @@ export default class TodosContainer {
   addTodo = (description) => {
     this.todos = getTodos() || [];
     if (description.trim().length !== 0) {
-      const id = (Math.floor(Math.random() * 100000)).toString();
+      const id = Math.floor(Math.random() * 100000).toString();
       const index = this.todos.length + 1;
       const todo = new Todo(id, description, false, index);
       this.todos.push(todo);
@@ -24,20 +24,21 @@ export default class TodosContainer {
     UI.remove(id);
   };
 
-  updateDescription=(id, description) => {
+  updateDescription = (id, description) => {
     this.todos = getTodos() || [];
     const [updateId] = id.match(/\d+/);
-    const updateDes = description.match(/\w+/g) ? description.match(/\w+/g).join(' ') : '';
-    if (updateDes.length > 0) {
+
+    if (description.trim().length !== 0) {
       this.todos = this.todos.map((todo) => {
         if (todo.id === updateId) {
-          return { ...todo, description: updateDes };
+          return { ...todo, description };
         }
         return todo;
       });
       setTodos(this.todos);
+      UI.updateTodo(id, description);
     } else {
       this.removeTodo(updateId);
     }
-  }
+  };
 }
